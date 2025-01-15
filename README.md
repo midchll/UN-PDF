@@ -1,19 +1,11 @@
-# 🎈 Blank app template
+# [PDFstract](https://un-pdf.streamlit.app)
+<https://un-pdf.streamlit.app>
 
-A simple Streamlit app template for you to modify!
+### ( WIP )
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+UN-PDF accepts pdf documents and translates their contents to markdown and HTML bodies.
 
-### How to run it on your own machine
+Summarize pdfs and upload to your markdown note-taker or use the generated HTML body to create a webpage. 
 
-1. Install the requirements
 
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+**Contact me**: <mitchellbdeevers@gmail.com>
