@@ -1,4 +1,4 @@
-# [PDFstract](https://un-pdf.streamlit.app)
+# [UN-PDF](https://un-pdf.streamlit.app)
 <https://un-pdf.streamlit.app>
 
 ### ( WIP )
