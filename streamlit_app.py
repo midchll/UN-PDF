@@ -3,6 +3,11 @@ from parser import Parser
 import tempfile
 import markdown
 
+st.set_page_config(
+    page_title="UN-PDF",
+    page_icon="random"
+)
+
 st.title("UN-PDF")
 st.header("From PDF..")
 st.subheader("To Markdown and HTML")
