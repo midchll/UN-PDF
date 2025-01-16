@@ -1,3 +1,7 @@
 streamlit
 pymupdf
 pymupdf4llm
+fitz
+os
+tempfile
+markdown
