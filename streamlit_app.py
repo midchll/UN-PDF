@@ -1,29 +1,25 @@
-import streamlit as st
+from streamlit_javascript import st_javascript
 from parser import Parser
-import tempfile
+import streamlit as st
 import markdown
+import tempfile
 
 st.set_page_config(
     page_title="UN-PDF",
     page_icon= '<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.6 37.5"><defs><style>.cls-1{fill:#231f20;}</style></defs><g id="Layer_1-2"><path class="cls-1" d="M18.75,37.5C5.22,37.5,0,30.8,0,20.24V1.43C0,.49.44,0,1.43,0h20.57c.93,0,1.43.49,1.43,1.43v18.81c0,6.71,2.75,10.78,8.96,10.78h9.46c6.27,0,9.18-4.07,9.18-10.78V1.43c0-.94.5-1.43,1.49-1.43h6.6c.99,0,1.48.49,1.48,1.43v18.81c0,9.62-5.94,17.27-18.75,17.27h-23.1Z"/></g></svg>',
+    layout="centered",
 )
-st.markdown('''<style>.css-1egvi7u {margin-top: -4rem;}</style>''',
-    unsafe_allow_html=True)
 
 hide_decoration_bar_style = '''<style>#stDecoration {visibility: hidden;}</style>'''
 st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
 
-toolbar_style = '''<style>.st-emotion-cache-15wzwg4, .st-emotion-cache-1b2ybts, .st-emotion-cache-1b2ybts {color: #000;}
-                   {</style>'''
-st.markdown(toolbar_style, unsafe_allow_html=True)
+st_theme = st_javascript("""window.getComputedStyle(window.parent.document.getElementsByClassName("stApp")[0]).getPropertyValue("color-scheme")""")
+if st_theme == "dark":
+    banner_path = "images/banner_dark.png"
+else:
+    banner_path = "images/banner_light.png"
 
-header_style = '''<style>.st-emotion-cache-h4xjwg {background: #FFD65A; height: 70px;}</style>'''
-st.markdown(header_style, unsafe_allow_html=True)
-
-
-st.title("UN-PDF")
-st.header("From PDF..")
-st.subheader("To Markdown and HTML")
+st.image(banner_path)
 
 input_file = st.file_uploader("Your PDF:", type="pdf")
 
