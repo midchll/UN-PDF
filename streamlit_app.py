@@ -10,6 +10,14 @@ st.set_page_config(
     layout="centered",
 )
 
+# Update default Streamlit styling
+update_style = """
+            <style>
+            footer {visibility: hidden;}
+            footer:after {content: "seeya"; visibility: visible; display: block; position: relative; padding: 5px; top: 2px;}
+            </style>
+            """
+st.markdown(update_style, unsafe_allow_html=True)
 hide_decoration_bar_style = '''<style>#stDecoration {visibility: hidden;}</style>'''
 st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
 
@@ -20,7 +28,7 @@ else:
     banner_path = "images/banner_light.png"
 
 st.image(banner_path)
-st.subheader("")
+st.subheader("") # Spacing between banner and file upload
 
 input_file = st.file_uploader("Your PDF:", type="pdf")
 
