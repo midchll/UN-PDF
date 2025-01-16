@@ -1,7 +1,4 @@
-streamlit
-pymupdf
-pymupdf4llm
-fitz
-os
-tempfile
-markdown
+streamlit==1.41.1
+pymupdf4llm==0.0.17
+PyMuPDF==1.25.1
+Markdown==3.7
