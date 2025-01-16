@@ -20,6 +20,7 @@ else:
     banner_path = "images/banner_light.png"
 
 st.image(banner_path)
+st.subheader("")
 
 input_file = st.file_uploader("Your PDF:", type="pdf")
 
@@ -54,8 +55,9 @@ if input_file:
             st.code(md_cont, language="markdown")
         elif selection == "images":
             st.subheader("Extracted Images")
-            for image_path in image_paths:
-                st.image(image_path)
+            if image_paths:
+                for image_path in image_paths:
+                    st.image(image_path)
 
     with html:
         options = ["preview", "raw", "images"]
@@ -71,5 +73,6 @@ if input_file:
             st.write(":(")
         elif selection == "images":
             st.subheader("Extracted Images")
-            for image_path in image_paths:
-                st.image(image_path)
+            if image_paths:
+                for image_path in image_paths:
+                    st.image(image_path)
