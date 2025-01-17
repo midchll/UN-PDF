@@ -20,7 +20,7 @@ if st_theme == "dark":
 else:
     banner_path = "images/banner_light.png"
 
-st.image("banner_path")
+st.image(banner_path)
 st.subheader("") # Spacing between banner and file upload
 
 input_file = st.file_uploader("Your PDF:", type="pdf")
