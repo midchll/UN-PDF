@@ -16,11 +16,11 @@ st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
 
 st_theme = st_javascript("""window.getComputedStyle(window.parent.document.getElementsByClassName("stApp")[0]).getPropertyValue("color-scheme")""")
 if st_theme == "dark":
-    banner_path = "images/banner_dark.png"
+    banner_path = "images/unpdf_banner.png"
 else:
     banner_path = "images/banner_light.png"
 
-st.image(banner_path)
+st.image("banner_path")
 st.subheader("") # Spacing between banner and file upload
 
 input_file = st.file_uploader("Your PDF:", type="pdf")
