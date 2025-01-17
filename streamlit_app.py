@@ -55,9 +55,12 @@ if input_file:
             elif selection == "raw":
                 st.code(md_cont, language="markdown")
             elif selection == "images":
-                st.subheader("Extracted Images")
-                for image_path in image_paths:
-                    st.image(image_path)
+                if not image_paths:
+                    st.subheader("No images found")
+                else:
+                    st.subheader("Extracted Images")
+                    for image_path in image_paths:
+                        st.image(image_path)
 
         with html:
             options = ["preview", "raw", "images"]
@@ -72,6 +75,9 @@ if input_file:
             elif selection == "raw":
                 st.code(html_cont, language="cshtml") # no react syntax highlighting for 'html'
             elif selection == "images":
-                st.subheader("Extracted Images")
-                for image_path in image_paths:
-                    st.image(image_path)
+                if not image_paths:
+                    st.subheader("No images found")
+                else:
+                    st.subheader("Extracted Images")
+                    for image_path in image_paths:
+                        st.image(image_path)
